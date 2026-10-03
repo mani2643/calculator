@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <link rel="icon" href="calculator_icon.png">
+</head>
+<body>
+    <main class="calculator">
+        <div class="calculator-header">
+            <span class="calculator-label">CALCULATOR</span>
+            <h1>Calculate<span>.</span></h1>
+        </div>
+        <div class="display-container">
+            <input type="text" id="display" readonly placeholder="0">
+        </div>
+        <div class="keys">
+
+            <!-- Row 1 -->
+            <button class="function-btn" onclick="clearDisplay()">C</button>
+            <button class="function-btn" onclick="deleteLast()">⌫</button>
+            <button class="operator-btn" onclick="appendToDisplay('%')">%</button>
+            <button class="operator-btn" onclick="appendToDisplay('/')">÷</button>
+
+            <!-- Row 2 -->
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator-btn" onclick="appendToDisplay('*')">×</button>
+
+            <!-- Row 3 -->
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator-btn" onclick="appendToDisplay('-')">−</button>
+
+            <!-- Row 4 -->
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator-btn" onclick="appendToDisplay('+')">+</button>
+
+            <!-- Row 5 -->
+            <button class="zero-btn" onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button class="equals-btn" onclick="calculate()">=</button>
+
+        </div>
+    </main>
+</body>
+</html>
